@@ -1,4 +1,4 @@
-
+        
 
 // // Função de Votação
 // function votar() {
@@ -74,6 +74,11 @@ function votar() {
         // Ocultar a página de votação e mostrar a tela de confirmação
         document.getElementById('paginaVotacao').style.display = 'none';
         document.getElementById('telaConfirmacao').style.display = 'block';
+
+         // Criar um objeto de áudio e tocar
+        var audio = new Audio('../assets/aud/som.mp3');
+        audio.play();
+
 
         // Limpar seleção e matrícula
         document.querySelector('input[name="candidato"]:checked').checked = false;
