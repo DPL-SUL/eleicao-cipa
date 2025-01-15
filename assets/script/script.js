@@ -75,8 +75,8 @@ function votar() {
         document.getElementById('paginaVotacao').style.display = 'none';
         document.getElementById('telaConfirmacao').style.display = 'block';
 
-         // Criar um objeto de áudio e tocar
-        var audio = new Audio('../assets/aud/som.mp3');
+     
+        var audio = new Audio('/eleicao-cipa/assets/aud/som.mp3');  // Caminho relativo ao GitHub Pages
         audio.play();
 
 
