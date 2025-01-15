@@ -229,26 +229,28 @@ function gerarRelatorioHora() {
 
 
 
+
+
+// Função para verificar a senha
+function verificarSenhaLimpar() {
+    let senhaCorreta = "1234";  // Substitua com a senha real
+    let senhaDigitada = prompt("Digite a senha para limpar os dados:");
+
+    if (senhaDigitada === senhaCorreta) {
+        // Se a senha estiver correta, limpar os dados
+        limparDados();
+    } else {
+        // Caso a senha esteja errada
+        alert("Senha incorreta. Acesso negado.");
+    }
+}
+
 // Função para limpar todos os dados da sessão
 function limparDados() {
     // Remove as informações de votos e horários armazenados no localStorage
     localStorage.removeItem('votos');
     localStorage.removeItem('horarios');
     localStorage.removeItem('matriculasQueJaVotaram'); // Remove as matrículas que já votaram
-
-    alert('Todos os dados de votação foram apagados!');
-
-    // Opcional: Redirecionar ou esconder os resultados
-    document.getElementById('resultados').style.display = 'none';
-    document.getElementById('resultadoVotos').innerHTML = '';
-}
-
-// Função para limpar todos os dados da sessão
-function limparDados() {
-    // Remover os votos e horários do localStorage
-    localStorage.removeItem('votos');  // Se você estiver armazenando votos de cada candidato
-    localStorage.removeItem('horarios');  // Se você estiver armazenando horários dos votos
-
 
     alert('Todos os dados de votação foram apagados!');
 
